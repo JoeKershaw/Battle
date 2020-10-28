@@ -1,2 +1,2 @@
-require_relative 'app.rb'
+require_relative 'lib/app.rb'
 run Battle

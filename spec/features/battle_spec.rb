@@ -16,3 +16,14 @@ feature "fill name form and appear on screen" do
     expect(page).to have_content "Joe VS Kalindi"
   end
 end
+
+feature "View other players hit points" do
+  scenario "View player 1 damage" do
+    visit("/play")
+    expect(page).to have_content "Player 1 Hit Points: 0"
+  end
+  scenario "View player 2 damage" do
+    visit("/play")
+    expect(page).to have_content "Player 2 Hit Points: 0"
+  end
+end
