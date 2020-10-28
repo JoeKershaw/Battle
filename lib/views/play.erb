@@ -1,3 +1,10 @@
 <h1> Biggest Battle of our time</h1>
 <%= @player1 %> VS <%= @player2 %>
 <h2> Player 1 Hit Points: 0, Player 2 Hit Points: 0 </h2>
+
+
+<form action="/attack" method="post">
+  <button type="submit">Attack</button>
+</form>
+
+<%= @confirmation %>
