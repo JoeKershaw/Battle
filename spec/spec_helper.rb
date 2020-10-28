@@ -13,6 +13,23 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
+
+require 'capybara'
+require 'capybara/rspec'
+require 'rspec'
+require './app.rb'
+
+
+ENV['RACK_ENV'] = 'test'
+# we thought we needed this, but maybe we only need the above
+# Capybara.register_driver :rack_test do |app|
+#   Capybara::RackTest::Driver.new(app, headers: { 'HTTP_USER_AGENT' => 'Capybara' })
+# end
+
+Capybara.app = Battle
+
+
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
